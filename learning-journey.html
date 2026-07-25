@@ -79,6 +79,94 @@
       font-size: 0.95rem;
     }
 
+    .growth-section {
+      margin: 32px 0;
+    }
+
+    .growth-section h2 {
+      margin: 0 0 8px;
+      font-size: 1.4rem;
+    }
+
+    .growth-section p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 780px;
+    }
+
+    .growth-diagram {
+      position: relative;
+      padding-left: 24px;
+      border-left: 4px solid rgba(201, 168, 76, 0.25);
+      display: grid;
+      gap: 18px;
+    }
+
+    .growth-node {
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 18px 18px 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+
+    .growth-node::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 22px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--card);
+    }
+
+    .growth-section {
+      margin: 32px 0;
+    }
+
+    .growth-section h2 {
+      margin: 0 0 8px;
+      font-size: 1.4rem;
+    }
+
+    .growth-section p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 780px;
+    }
+
+    .growth-diagram {
+      position: relative;
+      padding-left: 24px;
+      border-left: 4px solid rgba(201, 168, 76, 0.25);
+      display: grid;
+      gap: 18px;
+    }
+
+    .growth-node {
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 18px 18px 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+
+    .growth-node::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 22px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--card);
+    }
+
     .skillmap-section {
       margin: 32px 0 24px;
     }
@@ -210,6 +298,53 @@
         <h2>Applied Building</h2>
         <p>APIs, local storage, animations, and a full final project with real features.</p>
       </article>
+    </section>
+
+    <section class="growth-section">
+      <h2>Semester Growth Timeline</h2>
+      <p>Each week built on the one before it: starting with Git and HTML, then adding semantic structure, styling, interactivity, API work, and a final polished project.</p>
+      <div class="growth-diagram">
+        <article class="growth-node">
+          <strong>Week 1</strong>
+          <p>Started with GitHub setup, repo workflow, and basic HTML page creation.</p>
+        </article>
+        <article class="growth-node">
+          <strong>Week 2</strong>
+          <p>Learned semantic HTML tags, navigation, and how to organize page structure.</p>
+        </article>
+        <article class="growth-node">
+          <strong>Week 3</strong>
+          <p>Added CSS for shared styling and learned how one stylesheet can style multiple pages.</p>
+        </article>
+        <article class="growth-node">
+          <strong>Week 4</strong>
+          <p>Built responsive layout, worked with flex and grid, and created accessible forms.</p>
+        </article>
+        <article class="growth-node">
+          <strong>Week 5</strong>
+          <p>Practiced JavaScript basics, event listeners, console logs, and DOM interaction.</p>
+        </article>
+        <article class="growth-node">
+          <strong>Week 6</strong>
+          <p>Built functions, conditionals, and logic for calculator-type tools.</p>
+        </article>
+        <article class="growth-node">
+          <strong>Week 7</strong>
+          <p>Explored arrays, loops, API keys, and the importance of gitignore.</p>
+        </article>
+        <article class="growth-node">
+          <strong>Week 8</strong>
+          <p>Focused on app building with data fetching, debugging API calls, and UX improvements.</p>
+        </article>
+        <article class="growth-node">
+          <strong>Week 9</strong>
+          <p>Used browser APIs for dark mode, clipboard, and local storage features.</p>
+        </article>
+        <article class="growth-node">
+          <strong>Week 10</strong>
+          <p>Polished the final project with animations, API-driven visuals, and design refinements.</p>
+        </article>
+      </div>
     </section>
 
     <section class="skillmap-section">
