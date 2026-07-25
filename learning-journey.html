@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Learning Journey</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #c9a84c;
+      --accent-dark: #8e6d20;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #fffdf5, #f3e9c6);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 780px;
+    }
+
+    .overview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+
+    .overview-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+
+    .overview-card h2 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: var(--accent-dark);
+    }
+
+    .overview-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .skillmap-section {
+      margin: 32px 0 24px;
+    }
+
+    .skillmap-section h2 {
+      margin: 0 0 6px;
+      font-size: 1.3rem;
+    }
+
+    .skillmap-section p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .skillmap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .skill-node {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+
+    .skill-node .week-label {
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .skill-node h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+
+    .skill-node ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .skill-node li {
+      margin-bottom: 6px;
+    }
+
+    .status {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .week-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+
+    .week-card h3 {
+      margin: 0 0 6px;
+      font-size: 1.15rem;
+    }
+
+    .week-card .meta {
+      color: var(--accent-dark);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .week-card h4 {
+      margin: 14px 0 6px;
+      font-size: 0.95rem;
+      color: #374151;
+    }
+
+    .week-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .week-card li {
+      margin-bottom: 6px;
+    }
+
+    .empty {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      .hero { padding: 22px; }
+      .hero h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>My Learning Journey</h1>
+      <p>This page pulls together the weekly logs from the course to show how my skills grew from basic web structure to styling, interactivity, APIs, and a final project.</p>
+    </section>
+
+    <section class="overview">
+      <article class="overview-card">
+        <h2>Foundation</h2>
+        <p>HTML structure, semantic tags, and learning how to read and build pages.</p>
+      </article>
+      <article class="overview-card">
+        <h2>Design</h2>
+        <p>CSS, forms, accessibility, and making pages feel more polished and responsive.</p>
+      </article>
+      <article class="overview-card">
+        <h2>Interactivity</h2>
+        <p>JavaScript, functions, event listeners, DOM changes, and browser APIs.</p>
+      </article>
+      <article class="overview-card">
+        <h2>Applied Building</h2>
+        <p>APIs, local storage, animations, and a full final project with real features.</p>
+      </article>
+    </section>
+
+    <section class="skillmap-section">
+      <h2>Visual Skill Map</h2>
+      <p>This shows how your learning stacked week by week from setup to APIs and final-project work.</p>
+      <div id="skillmap" class="skillmap"></div>
+    </section>
+
+    <div id="status" class="status">Loading weekly logs...</div>
+    <section id="timeline" class="timeline"></section>
+  </main>
+
+  <script>
+    const weekFiles = [
+      'logs/wk01.md',
+      'logs/wk02.md',
+      'logs/wk03.md',
+      'logs/wk04.md',
+      'logs/wk05.md',
+      'logs/wk06.md',
+      'logs/wk07.md',
+      'logs/wk08.md',
+      'logs/wk09.md',
+      'logs/wk10.md'
+    ];
+
+    const timeline = document.getElementById('timeline');
+    const status = document.getElementById('status');
+    const skillmap = document.getElementById('skillmap');
+
+    const skillMapData = [
+      {
+        week: 'Week 1',
+        title: 'Setup & foundation',
+        skills: ['GitHub repos', 'HTML basics', 'AI-assisted learning']
+      },
+      {
+        week: 'Week 2',
+        title: 'Semantic structure',
+        skills: ['Semantic tags', 'Navigation', 'Accessible page layout']
+      },
+      {
+        week: 'Week 3',
+        title: 'Styling with CSS',
+        skills: ['External stylesheets', 'Consistent design', 'Form styling']
+      },
+      {
+        week: 'Week 4',
+        title: 'Responsive design',
+        skills: ['CSS layout', 'Flexbox', 'Responsive pages']
+      },
+      {
+        week: 'Week 5',
+        title: 'JavaScript basics',
+        skills: ['Event listeners', 'Console debugging', 'DOM interaction']
+      },
+      {
+        week: 'Week 6',
+        title: 'Logic & functions',
+        skills: ['Functions', 'Conditionals', 'Calculator-style apps']
+      },
+      {
+        week: 'Week 7',
+        title: 'Data & APIs',
+        skills: ['Arrays', 'Loops', 'API awareness', 'Security basics']
+      },
+      {
+        week: 'Week 8',
+        title: 'App building',
+        skills: ['Fetching data', 'Git ignore', 'API troubleshooting']
+      },
+      {
+        week: 'Week 9',
+        title: 'Browser APIs',
+        skills: ['Dark mode', 'Clipboard API', 'Local storage']
+      },
+      {
+        week: 'Week 10',
+        title: 'Polish & final project',
+        skills: ['Animations', 'API-driven visuals', 'Project refinement']
+      }
+    ];
+
+    function renderSkillMap() {
+      skillmap.innerHTML = skillMapData.map((item) => `
+        <article class="skill-node">
+          <div class="week-label">${item.week}</div>
+          <h3>${item.title}</h3>
+          <ul>
+            ${item.skills.map((skill) => `<li>${skill}</li>`).join('')}
+          </ul>
+        </article>
+      `).join('');
+    }
+
+    function cleanMarkdown(text) {
+      return text
+        .replace(/<!--([\s\S]*?)-->/g, '')
+        .replace(/```[\s\S]*?```/g, '')
+        .trim();
+    }
+
+    function extractSection(markdown, heading) {
+      const sections = markdown.split(/^## /m);
+      const target = sections.find((section) => section.startsWith(heading));
+      if (!target) return '';
+
+      return target
+        .split(/^## /m)[1] || target;
+    }
+
+    function stripMarkdown(text) {
+      return text
+        .replace(/^#{1,6}\s*/gm, '')
+        .replace(/\*\*(.*?)\*\*/g, '$1')
+        .replace(/\*(.*?)\*/g, '$1')
+        .replace(/`([^`]+)`/g, '$1')
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1')
+        .replace(/>\s?/g, '')
+        .replace(/^-\s+/gm, '')
+        .trim();
+    }
+
+    function parseWeek(markdown) {
+      const titleMatch = markdown.match(/^#\s+(.*)$/m);
+      const weekMatch = markdown.match(/^Week:\s*(.+)$/m);
+      const worked = extractSection(markdown, 'What I worked on');
+      const learned = extractSection(markdown, 'What I learned');
+      const questions = extractSection(markdown, 'Questions');
+
+      const workedText = stripMarkdown(worked);
+      const learnedText = stripMarkdown(learned);
+      const questionsText = stripMarkdown(questions);
+
+      return {
+        title: titleMatch ? titleMatch[1] : 'Weekly Log',
+        week: weekMatch ? weekMatch[1] : 'Unknown week',
+        worked: workedText || 'No summary recorded yet.',
+        learned: learnedText || 'No learning notes recorded yet.',
+        questions: questionsText || 'No questions recorded yet.'
+      };
+    }
+
+    function formatBullets(text) {
+      const lines = text
+        .split(/\n+/)
+        .map((line) => line.trim())
+        .filter(Boolean)
+        .filter((line) => !line.startsWith('>'));
+
+      if (!lines.length) {
+        return '<p class="empty">No details recorded yet.</p>';
+      }
+
+      const bulletItems = lines
+        .map((line) => line.replace(/^[-*]\s*/, ''))
+        .map((line) => `<li>${line}</li>`)
+        .join('');
+
+      return `<ul>${bulletItems}</ul>`;
+    }
+
+    async function loadLogs() {
+      try {
+        const entries = await Promise.all(weekFiles.map(async (file) => {
+          const response = await fetch(file);
+          if (!response.ok) throw new Error(`Could not load ${file}`);
+          const text = await response.text();
+          return parseWeek(cleanMarkdown(text));
+        }));
+
+        const cards = entries.map((entry, index) => {
+          const weekNumber = index + 1;
+          return `
+            <article class="week-card">
+              <h3>Week ${weekNumber}</h3>
+              <div class="meta">${entry.week}</div>
+              <h4>What I worked on</h4>
+              ${formatBullets(entry.worked)}
+              <h4>What I learned</h4>
+              ${formatBullets(entry.learned)}
+              <h4>Questions</h4>
+              ${formatBullets(entry.questions)}
+            </article>
+          `;
+        }).join('');
+
+        timeline.innerHTML = cards;
+        status.textContent = 'Weekly logs loaded successfully.';
+      } catch (error) {
+        status.textContent = 'The logs could not be loaded. Please open this page from a local server.';
+        timeline.innerHTML = `<p class="empty">${error.message}</p>`;
+      }
+    }
+
+    loadLogs();
+  </script>
+</body>
+</html>
